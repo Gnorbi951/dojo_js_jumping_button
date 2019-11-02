@@ -1,4 +1,13 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <h1>henlo</h1>
+    <h1>Questions</h1>
+    <form method="get">
+        <label for="question">Give me a question</label><br>
+        <textarea placeholder="Your question goes here" id="question" style="height: 82px; width: 323px;
+ resize: none"></textarea><br>
+        <label for="yes_check">Set the only answer</label><a id="drop">__Click here to toggle dropwdown </a><br>
+        <div id="dropdown">
+        </div><br>
+        <button type="submit" id="submit_button">Submit question</button>
+    </form>
 {% endblock %}
