@@ -4,6 +4,8 @@ const dropdownContext = `   <div id="js_drop">
                             <input type="radio" id="no_check">No<br>
                             </div>`;
 const dropButton = document.querySelector('#drop');
+const yesCheck = document.querySelectorAll('#yes_check');
+const noCheck = document.querySelectorAll('#no_check');
 let dropDowStatus = 'not_toggled';
 
 function dropBar() {
@@ -19,4 +21,13 @@ function dropBar() {
 
 }
 
+function checkButtons(event) {
+    if (event.target.id === 'no_check') {
+        document.querySelector('#yes_check').checked = false;
+    } else if (event.target.id === 'yes_check') {
+        document.querySelector('#no_check').checked = false;
+    }
+}
+
+document.addEventListener('click', checkButtons);
 dropButton.addEventListener('click', dropBar);
